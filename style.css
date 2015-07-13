@@ -1,0 +1,319 @@
+/*= HTML elements reset (selective) */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+address,
+dl,
+dt,
+dd,
+pre,
+form,
+figure,
+figcaption,
+article,
+nav,
+header,
+section,
+footer {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+  list-style: none;
+}
+
+/*= General elements */
+
+.hidden {
+	position: absolute;
+	top: -9999em;
+}
+
+.clearfix:after {
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.delete {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	text-indent: -99999em;
+	background: url(images/icon-delete.png) no-repeat;
+}
+
+.button {
+	display: inline-block;
+	cursor: pointer;
+	background: #dd3200;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.7em 1.7em;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-shadow: 1px 1px 1px #800;
+}
+
+.button {
+	background: #dd3200;
+    background-image: linear-gradient(to bottom, #dd3400, #aa0000);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #990000 4px;
+    text-decoration: none;
+}
+
+.button:hover {
+	background: #aa0000;
+	background-image: linear-gradient(to bottom, #aa0000, #dd3200);
+	text-decoration: none;
+}
+
+.button:focus,
+.button:active {
+	border-color: #e00;
+	outline-style: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Safari */
+    color: #000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #000;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #000;
+}
+
+:-ms-input-placeholder { /* IE */
+    color: #000;
+}
+
+*:focus {
+  outline-style: none;
+}
+
+input[type="button"],
+button,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+
+body {
+	background: #fff;
+	color: #000;
+	font: 100%/1 Avenir, Arial, sans-serif;
+}
+
+input, select {
+	font: 1em Avenir, Arial, sans-serif;
+}
+
+/*= Layout */
+
+
+#app {
+	width: 100%;
+}
+
+#app-header {
+	padding: 1em 0;	
+}
+
+#app-header h1 {
+	max-width: 800px;
+	margin: 0 auto;
+	color: #dd3200;
+	font-weight: bold;
+	font-size: 1.8em;
+	min-height: 72px;
+	padding-left: 78px;
+	background: url(images/logo-header.png) no-repeat 0 50%;
+	line-height: 72px;
+}
+
+#content {
+	margin: 2em 0;
+}
+
+#subheader {
+	height: 531px;
+	background: #f2f2f2;
+}
+
+#subheader:after {
+	content: ' ';
+	display: block;
+	max-width: 800px;
+	margin: 0 auto;
+	height: 100%;
+	background: url(images/header.png) no-repeat;
+}
+
+#content-wrap {
+	max-width: 800px;
+	margin: 0 auto;	
+}
+
+#form-title {
+	text-align: center;
+	font-size: 2em;
+	color: #dd3200;
+	padding-bottom: 100px;
+	background: url(images/icon-first-aid.png) no-repeat 50% 100%;
+	margin-bottom: 1.5em;
+}
+
+#save-form input[type="text"] {
+	display: block;
+	margin-bottom: 1em;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	padding: 10px 5px;
+	background: #fff;
+}
+
+#save-form p {
+	margin: 1em 0;
+	text-align: center;
+}
+
+#save-form .button-wrapper input {
+	min-width: 130px;
+}
+
+#save-form .button-wrapper input[type="submit"] {
+	float: left;
+	margin-right: 1em;
+}
+
+#save-form .button-wrapper input[type="reset"] {
+	float: right;
+}
+
+#save-form .error {
+	margin-bottom: 1em;
+	color: #c00;
+	display: none;
+}
+
+#import-export a {
+	margin-left: 1em;
+}
+
+
+
+
+#data {
+	margin: 2.5em 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+#data th {
+	font-weight: bold;
+	width: 20%;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 58px 0 40px 0;
+	color: #dd3200;
+	color: #000;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+
+#data .date {
+	background-image: url(images/icon-date.png);
+}
+#data .hour {
+	background-image: url(images/icon-hour.png);
+}
+#data .min {
+	background-image: url(images/icon-min.png);
+}
+#data .max {
+	background-image: url(images/icon-max.png);
+}
+#data .pulse {
+	background-image: url(images/icon-pulse.png);
+}
+
+#data td {
+	text-align: center;
+	padding: 8px;
+	border: 1px solid #ddd;	
+}
+
+#import-file {
+	margin: 1.5em 0;
+	text-align: center;
+}
+
+#diagram {
+	width: 100%;
+	margin: 2.5em 0;
+	background: #f2f2f2;
+	padding: 2em 0;
+}
+
+#diagram-wrapper {
+	margin: 0 auto;
+	padding: 1.5em 0;
+	max-width: 800px;
+}
+
+#data + p {
+	text-align: center;
+}
+
+#app-footer {
+	padding: 1em 0;
+	background: #f2f2f2;
+}
+
+#app-footer-wrapper {
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+#app-footer-logo {
+	font-weight: bold;
+	font-size: 1.8em;
+	min-height: 72px;
+	padding-left: 78px;
+	background: url(images/logo-footer.png) no-repeat 0 50%;
+	line-height: 72px;
+	float: left;
+	margin-right: 16px;
+}
+
+#credits {
+	float: right;
+	font-weight: bold;
+	min-height: 72px;
+	line-height: 72px;
+}
+

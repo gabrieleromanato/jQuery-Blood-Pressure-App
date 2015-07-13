@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blood Pressure</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="js/ui-theme/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="js/jquery.timepicker.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/dexie.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/datepicker-it.js"></script>
+<script type="text/javascript" src="js/jquery.timepicker.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div id="app">
+	<header id="app-header">
+		<h1 id="app-logo">Blood Pressure</h1>
+	</header>
+	<div id="subheader"></div>
+	<div id="content">
+		
+	  <div id="content-wrap">
+		<form action="" method="post" id="save-form">
+			<h2 id="form-title">Test your blood pressure</h2>
+			<div>
+				<input type="text" id="date" name="date" placeholder="Date" />
+				<div class="error">The Date field is not valid</div>
+				<input type="text" id="hour" name="hour" placeholder="Hour" />
+				<div class="error">The hour field is not valid</div>
+			</div>
+			<div>
+				<input type="text" id="max" name="max" placeholder="Systolic" />
+				<div class="error">The Systolic field is not valid</div>
+				<input type="text" id="min" name="min" placeholder="Diastolic" />
+				<div class="error">The Diastolic field is not valid</div>
+				<input type="text" id="pulse" name="pulse" placeholder="Pulse" />
+				<div class="error">The Pulse field is not valid</div>
+			</div>
+			<p class="button-wrapper clearfix">
+				<input type="submit" value="Save" class="button" />
+				<input type="reset" value="Reset" class="button" />
+		     </p>
+		</form>
+		<table id="data">
+			<thead>
+				<tr>
+					<th scope="col" class="date">Date</th>
+					<th scope="col" class="hour">Hour</th>
+					<th scope="col" class="max">Systolic</th>
+					<th scope="col" class="min">Diastolic</th>
+					<th scope="col" class="pulse" colspan="2">Pulse</th>
+				</tr>
+			</thead>
+			<tbody id="data-body"></tbody>
+		</table>
+		<p id="import-export">
+			<a href="" id="export" class="button">Export</a><a href="" id="import" class="button">Import</a>
+			<div id="import-file" class="hidden">
+				<input type="file" name="csv" id="csv" />
+			</div>
+		</p>
+
+		
+	  </div>
+
+	 <div id="diagram">
+		<div id="diagram-wrapper">
+			<div id="pressure-diagram"></div>
+		</div>
+	  </div>
+	  
+	</div>
+	<footer id="app-footer">
+	  <div id="app-footer-wrapper" class="clearfix">
+		<p id="app-footer-logo">Blood Pressure</p>
+		<p id="credits">Made by Gabriele Romanato</p>
+	  </div>
+	</footer>
+</div>
+
+
+</body>
+</html>
